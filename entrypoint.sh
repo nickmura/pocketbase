@@ -4,6 +4,7 @@ set -e
 : "${DATA_DIR:=/data}"
 mkdir -p "$DATA_DIR"
 chown -R pocketbase:pocketbase "$DATA_DIR"
+chown -R pocketbase:pocketbase /app/pb_hooks /app/pb_migrations 2>/dev/null || true
 
 echo "=== entrypoint debug ==="
 echo "PWD: $(pwd)"
