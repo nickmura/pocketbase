@@ -8,6 +8,7 @@ onMailerSend((e) => {
     }
     console.log("[resend-mailer] sending via Resend HTTPS API");
 
+    
     const fromAddress = e.message.from?.address || $app.settings().meta.senderAddress;
     const fromName = e.message.from?.name || $app.settings().meta.senderName;
     const from = fromName ? `${fromName} <${fromAddress}>` : fromAddress;
