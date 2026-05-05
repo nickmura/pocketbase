@@ -1,4 +1,5 @@
 /// <reference path="../pb_data/types.d.ts" />
+$app.logger().info("[resend-mailer] hook file loaded");
 onMailerSend((e) => {
     console.log("[resend-mailer] intercepting mail to", e.message.to.map((t) => t.address).join(","));
     const apiKey = $os.getenv("RESEND_API_KEY");

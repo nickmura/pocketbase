@@ -1,4 +1,5 @@
 /// <reference path="../pb_data/types.d.ts" />
+$app.logger().info("[order-notifications] hook file loaded");
 onRecordAfterCreateSuccess((e) => {
   const app = $app;
   const record = e.record;
